@@ -1,0 +1,140 @@
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #1a2e35; /* Dark green background */
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Container Styling */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Profile Styling */
+.profile {
+    background-color: #e0f7fa; /* Light mint green background for the profile card */
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Slightly darker shadow for contrast */
+    text-align: center;
+    width: 320px;
+}
+
+/* Bunny Animation */
+.bunny {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    margin: 0 auto 1rem;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.bunny:hover {
+    transform: scale(1.1); /* Hover effect */
+}
+
+.bunny-svg {
+    width: 100%;
+    height: 100%;
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+/* Ear Wiggle Animation */
+.bunny-svg ellipse:nth-of-type(1),
+.bunny-svg ellipse:nth-of-type(3) {
+    animation: wiggle 1.5s infinite;
+}
+
+@keyframes wiggle {
+    0%, 100% { transform: rotate(-5deg); }
+    50% { transform: rotate(5deg); }
+}
+
+/* Eye Blink Animation */
+.bunny-svg circle:nth-of-type(1),
+.bunny-svg circle:nth-of-type(2) {
+    animation: blink 3s infinite;
+}
+
+@keyframes blink {
+    0%, 95%, 100% { transform: scaleY(1); }
+    97.5% { transform: scaleY(0.1); }
+}
+
+/* Name and Bio */
+h1 {
+    font-size: 1.8rem;
+    color: #1a2e35; /* Dark green for the name */
+    margin-bottom: 0.5rem;
+}
+
+.bio {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    color: #555;
+}
+
+/* Social Links */
+.social-links a {
+    display: inline-block;
+    margin: 0.5rem;
+    text-decoration: none;
+    color: #1a2e35; /* Dark green for links */
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #00796b; /* Teal green for hover effect */
+}
+
+/* Contact Button */
+.contact-btn {
+    display: inline-block;
+    background-color: #1a2e35; /* Dark green background for the button */
+    color: white;
+    padding: 0.6rem 1.2rem;
+    border-radius: 8px;
+    text-decoration: none;
+    margin-top: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.contact-btn:hover {
+    background-color: #00796b; /* Teal green for hover effect */
+}
+
+/* Responsive Design */
+@media (max-width: 400px) {
+    .profile {
+        width: 90%;
+        padding: 1rem;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    .bio {
+        font-size: 0.9rem;
+    }
+
+    .social-links a {
+        font-size: 0.9rem;
+    }
+
+    .contact-btn {
+        padding: 0.5rem 1rem;
+    }
+}

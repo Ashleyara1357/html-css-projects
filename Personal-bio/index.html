@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Personal Bio</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div class="container">
+        <div class="profile">
+            <!-- Bunny Animation -->
+            <div class="bunny" onclick="playBunnySound()">
+                <svg class="bunny-svg" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Head -->
+                    <circle cx="100" cy="100" r="70" fill="white" />
+                    
+                    <!-- Left Ear -->
+                    <ellipse cx="70" cy="40" rx="15" ry="40" fill="black" />
+                    <ellipse cx="70" cy="45" rx="10" ry="35" fill="pink" />
+                    
+                    <!-- Right Ear -->
+                    <ellipse cx="130" cy="40" rx="15" ry="40" fill="black" />
+                    <ellipse cx="130" cy="45" rx="10" ry="35" fill="pink" />
+                    
+                    <!-- Left Eye -->
+                    <circle cx="85" cy="90" r="5" fill="black" />
+                    
+                    <!-- Right Eye -->
+                    <circle cx="115" cy="90" r="5" fill="black" />
+                    
+                    <!-- Nose -->
+                    <path d="M95,115 Q100,120 105,115 Q100,125 95,115 Z" fill="pink" />
+                    
+                    <!-- Mouth -->
+                    <path d="M95,125 Q100,130 105,125" stroke="black" stroke-width="1.5" fill="none" />
+                    
+                    <!-- Whiskers -->
+                    <line x1="85" y1="120" x2="65" y2="120" stroke="gray" stroke-width="1" stroke-linecap="round" />
+                    <line x1="85" y1="125" x2="65" y2="125" stroke="gray" stroke-width="1" stroke-linecap="round" />
+                    <line x1="115" y1="120" x2="135" y2="120" stroke="gray" stroke-width="1" stroke-linecap="round" />
+                    <line x1="115" y1="125" x2="135" y2="125" stroke="gray" stroke-width="1" stroke-linecap="round" />
+                </svg>
+            </div>
+            <h1>Ashley Ramos-Amaya</h1>
+            <p class="bio">
+                Hi, I'm Ashley! I'm an Information Technology student with a passion for coding, web development, and problem-solving.  
+                I enjoy working on creative projects and expanding my technical skills.
+            </p>
+            <div class="social-links">
+                <a href="https://github.com/Ashleyara1357" target="_blank">GitHub</a>
+                <a href="https://www.linkedin.com/in/ashley-ramos-819593289/" target="_blank">LinkedIn</a>
+                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=ashleyara1357@gmail.com" target="_blank">Gmail</a>
+                <a href="https://outlook.office.com/mail/deeplink/compose?to=ashleyaramosamaya@students.abtech.edu" target="_blank">Outlook</a>
+            </div>
+            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=ashleyara1357@gmail.com" class="contact-btn" target="_blank">Contact Me</a>
+        </div>
+    </div>
+
+    <!-- Hidden Audio Element for Sound Effect -->
+    <audio id="bunny-sound" src="bunny-sound.mp3"></audio>
+
+    <script>
+        // JavaScript to play sound on click
+        function playBunnySound() {
+            const bunnySound = document.getElementById("bunny-sound");
+            bunnySound.currentTime = 0; // Reset sound to start
+            bunnySound.play();
+        }
+    </script>
+</body>
+</html>

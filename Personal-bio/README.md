@@ -18,11 +18,6 @@ The goal is to create a cute and interactive personal bio page that showcases ba
 
 ---
 
-## 📸 Preview:
-![Preview Image](./screenshot.png)
-
----
-
 ### 👨‍💻 How to Run:
 1. Clone the repository:
 ```bash
